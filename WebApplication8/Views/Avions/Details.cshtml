@@ -1,0 +1,42 @@
+﻿@model WebApplication8.Models.Avion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Avion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nom_Av)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nom_Av)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Localisation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Localisation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Num_Av }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

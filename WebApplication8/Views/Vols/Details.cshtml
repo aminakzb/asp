@@ -1,0 +1,66 @@
+﻿@model WebApplication8.Models.Vol
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vol</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ville_Depart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ville_Depart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ville_Arrivee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ville_Arrivee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_depart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_depart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_arrivee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_arrivee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Avion.Nom_Av)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Avion.Nom_Av)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pilote.Nom_pil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pilote.Nom_pil)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Num_Vol }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

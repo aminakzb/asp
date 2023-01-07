@@ -1,0 +1,100 @@
+﻿@model IEnumerable<WebApplication8.Models.Pilote>
+
+@{
+    ViewBag.Title = "Index";
+    var max = Model.Max(p => p.Salaire);
+    var min = Model.Min(p => p.Salaire);
+    var somme = Model.Sum(p => p.Salaire);
+    var avg = Model.Average(p => p.Salaire);
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom_pil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prenom_pil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salaire)
+        </th>
+        <th>
+            Max
+        </th>
+        <th>
+            Min
+        </th>
+        <th>
+            Sum
+        </th>
+        <th>
+            Avg
+        </th>
+        <!--
+        <th>
+          @Html.DisplayNameFor(model => model.Ville_Domicile)
+      </th>
+      <th>
+          @Html.DisplayNameFor(model => model.Num_tel)
+      </th>
+      <th>
+          @Html.DisplayNameFor(model => model.Email)
+      </th>
+
+      <th></th>
+    -->
+
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nom_pil)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Prenom_pil)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Salaire)
+    </td>
+    <td>
+        @max
+    </td>
+    <td>
+        @min
+    </td>
+    <td>
+        @somme
+    </td>
+    <td>
+        @avg
+    </td>
+    <!--
+        <td>
+        @Html.DisplayFor(modelItem => item.Ville_Domicile)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Num_tel)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id=item.Num_pil }) |
+        @Html.ActionLink("Details", "Details", new { id=item.Num_pil }) |
+        @Html.ActionLink("Delete", "Delete", new { id=item.Num_pil })
+    </td>
+
+        -->
+
+</tr>
+}
+
+</table>
